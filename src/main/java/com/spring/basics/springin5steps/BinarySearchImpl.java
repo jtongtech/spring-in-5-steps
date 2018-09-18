@@ -3,9 +3,9 @@ package com.spring.basics.springin5steps;
 public class BinarySearchImpl {
 	
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
-//		Implementing Sorting Logic
-//		Bubble Sort Algorithm
-//		Quick Sort Algorithm
+		BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+		int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
+
 //		Search the array
 		return 3;
 	}

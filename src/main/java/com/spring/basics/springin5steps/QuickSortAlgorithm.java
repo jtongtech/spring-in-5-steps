@@ -1,8 +1,8 @@
 package com.spring.basics.springin5steps;
 
-public class BubbleSortAlgorithm {
+public class QuickSortAlgorithm {
 	public int[] sort(int[] numbers) {
-//		Logic for Bubble Sort
+//		Logic for Quick Sort
 		return numbers;
 	}
 
