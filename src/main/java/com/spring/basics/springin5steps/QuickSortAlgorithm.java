@@ -1,10 +1,9 @@
 package com.spring.basics.springin5steps;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+//@Primary
 public class QuickSortAlgorithm implements SortAlgorithm {
 	@Override
 	public int[] sort(int[] numbers) {
