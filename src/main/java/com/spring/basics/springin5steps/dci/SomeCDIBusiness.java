@@ -1,12 +1,12 @@
 package com.spring.basics.springin5steps.dci;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import javax.inject.Inject;
+import javax.inject.Named;
 
-@Component
+@Named
 public class SomeCDIBusiness {
 
-	@Autowired
+	@Inject
 	SomeCDIDAO someCDIDAO;
 
 	public SomeCDIDAO getSomeCDIDAO() {

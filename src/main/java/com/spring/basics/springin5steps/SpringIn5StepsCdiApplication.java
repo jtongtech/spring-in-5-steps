@@ -18,7 +18,7 @@ public class SpringIn5StepsCdiApplication {
 		ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsCdiApplication.class, args);
 		SomeCDIBusiness business = applicationContext.getBean(SomeCDIBusiness.class);
 
-		LOGGER.info("{}", business);
+		LOGGER.info("{} dao-{}", business, business.getSomeCDIDAO());
 
 	}
 }
