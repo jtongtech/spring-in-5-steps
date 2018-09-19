@@ -1,5 +1,9 @@
 package com.spring.basics.springin5steps.basic;
 
+import javax.annotation.PostConstruct;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -9,6 +13,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class BinarySearchImpl {
+
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	@Qualifier("bubble")
 	private SortAlgorithm sortAlgorithm;
@@ -29,7 +36,11 @@ public class BinarySearchImpl {
 //		Search the array
 		return 3;
 	}
-//	Sorting an array
-//	Search the array
-//	Return the result
+
+	@PostConstruct
+	public void postConstruct() {
+		logger.info("postConstruct");
+
+	}
+
 }
