@@ -1,5 +1,6 @@
 package com.spring.basics.springin5steps;
 
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,12 +8,10 @@ import org.springframework.context.ApplicationContext;
 
 import com.spring.basics.springin5steps.scope.PersonDAO;
 
-import ch.qos.logback.classic.Logger;
-
 @SpringBootApplication
 public class SpringIn5StepsScopeApplication {
 
-	static Logger LOGGER = (Logger) LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class);
+	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class);
 
 	public static void main(String[] args) {
 
