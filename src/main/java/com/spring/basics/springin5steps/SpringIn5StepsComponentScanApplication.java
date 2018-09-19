@@ -5,10 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.spring.basics.componentscan.ComponentDAO;
 
 @SpringBootApplication
+@ComponentScan("com.spring.basics.componentscan")
 public class SpringIn5StepsComponentScanApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsComponentScanApplication.class);
