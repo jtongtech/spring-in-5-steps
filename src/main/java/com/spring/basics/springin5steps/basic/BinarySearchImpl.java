@@ -1,6 +1,7 @@
 package com.spring.basics.springin5steps.basic;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,6 +41,12 @@ public class BinarySearchImpl {
 	@PostConstruct
 	public void postConstruct() {
 		logger.info("postConstruct");
+
+	}
+
+	@PreDestroy
+	public void preDestroy() {
+		logger.info("preDestroy");
 
 	}
 
