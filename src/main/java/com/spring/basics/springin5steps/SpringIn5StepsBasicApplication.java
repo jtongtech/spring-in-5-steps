@@ -2,13 +2,9 @@ package com.spring.basics.springin5steps;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 import com.spring.basics.springin5steps.basic.BinarySearchImpl;
 
-@Configuration
-@ComponentScan
 public class SpringIn5StepsBasicApplication {
 
 	public static void main(String[] args) {
