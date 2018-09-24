@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(locations = "/testContext.xml")
-public class BinarySearchXMLConficurationTest {
+public class BinarySearchXMLConfigurationTest {
 
 	@Autowired
 	BinarySearchImpl binarySearch;
