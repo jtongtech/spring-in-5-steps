@@ -21,8 +21,19 @@ public class SomeCdiBusinessTest {
 	@Test
 	public void testBasicScenario() {
 		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 });
-		int result = business.findGreatest();
-		assertEquals(4, result);
+		assertEquals(4, business.findGreatest());
+	}
+
+	@Test
+	public void testBasicScenarioNoValuePassed() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] {});
+		assertEquals(Integer.MIN_VALUE, business.findGreatest());
+	}
+
+	@Test
+	public void testBasicScenarioValuesEqual() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 2 });
+		assertEquals(2, business.findGreatest());
 	}
 
 }
