@@ -4,23 +4,25 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
-import com.spring.basics.springin5steps.SpringIn5StepsBasicApplication;
-
-@RunWith(SpringRunner.class)
-@ContextConfiguration(classes = SpringIn5StepsBasicApplication.class)
+@RunWith(MockitoJUnitRunner.class)
 public class SomeCdiBusinessTest {
 
-	@Autowired
+	@InjectMocks
 	SomeCDIBusiness business;
+
+	@Mock
+	SomeCDIDAO daoMock;
 
 	@Test
 	public void testBasicScenario() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 });
 		int result = business.findGreatest();
-		assertEquals(100, result);
+		assertEquals(4, result);
 	}
 
 }
